@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: naveengithubpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: naveengithubpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: naveengithubpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: naveengithubpipelinesjavascriptdocker 
+          image: mycontainerreg787.azurecr.io/naveengithubpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
